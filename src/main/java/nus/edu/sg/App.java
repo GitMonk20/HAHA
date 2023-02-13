@@ -40,18 +40,7 @@ public class TicTacToe {
     }
   }
 
-  static void takeTurn() {
-    System.out.print("Player " + turn + ", enter your move (row[1-3] column[1-3]): ");
-    int row = sc.nextInt() - 1;
-    int col = sc.nextInt() - 1;
-    while (board[row][col] != ' ') {
-      System.out.println("Move already made. Try again.");
-      System.out.print("Player " + turn + ", enter your move (row[1-3] column[1-3]): ");
-      row = sc.nextInt() - 1;
-      col = sc.nextInt() - 1;
-    }
-    board[row][col] = turn;
-  }
+ 
 
   static boolean isWinner() {
     for (int i = 0; i < 3; i++) {
